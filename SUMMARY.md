@@ -24,10 +24,8 @@
 
 ## Network Analysis Tools
 
----
-
-* [Tcpdump](tcpdump.md)
-* [Wireshark](wireshark.md)
+* [Wireshark](network-analysis-tools/wireshark.md)
+* [Tcpdump](network-analysis-tools/tcpdump.md)
 
 ## Passive Information Gathering
 
