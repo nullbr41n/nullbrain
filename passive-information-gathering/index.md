@@ -1,10 +1,10 @@
 # Index
 
-### Information Gathering
+## Information Gathering
 
 `"TIME SPENT IN RECONNAISSANCE IS SELDOM WASTED." - JOHN MARSDEN`
 
-#### Passive Information Gathering
+### Passive Information Gathering
 
 Open-source Intelligence Or OSINT is generally referred to as passive information gathering.
 

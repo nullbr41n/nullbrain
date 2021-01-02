@@ -15,5 +15,5 @@ Recon-ng is module based, similar to Metasploit \(if you have some experience us
 | options set SOURCE &lt;string&gt; | Set our target domain. |
 | run | Run the module. |
 | back | Return to the main recon-ng prompt |
-| show | Show stored data  |
+| show | Show stored data |
 

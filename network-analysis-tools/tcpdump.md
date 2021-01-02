@@ -31,23 +31,23 @@ Usage: tcpdump [-aAbdDefhHIJKlLnNOpqStuUvxX#] [ -B size ] [ -c count ]
   * super user required
   * triggers DNS traffic
 
-### Check available interfaces
+## Check available interfaces
 
 `tcpdump -D`
 
-### Capture all interfaces
+## Capture all interfaces
 
 `-i any`
 
-### Count \(stops at\)
+## Count \(stops at\)
 
 `-c n`
 
-### No reverse or ptr lookup
+## No reverse or ptr lookup
 
 `-n`
 
-### Set capture size
+## Set capture size
 
 `-s96` \( default 96 bytes\)
 
@@ -55,7 +55,7 @@ Quick Note:
 
 * seq number: after first it represents relative seq number by default.
 
-### compound expression
+## compound expression
 
 `tcpdump -i eth0 -n "host 192xxxx and (port 80 or port 443)"`
 
@@ -63,27 +63,27 @@ Quick Note:
 
 * paranthesis around the port number otherwise it wont be interpreted differently and also quotes around expression otherwise paranthesis will be treated differently in bash.
 
-### More filters
+## More filters
 
 `"src net 192.168.0.0/16" and not dst net 192.168.0.0/16 and not dst net 10.0.0.0/18"`
 
-### Mac based filter
+## Mac based filter
 
 `-e (to see capture)`
 
-### Protocol type filter
+## Protocol type filter
 
 `-i any ip6`
 
-### only for syn
+## only for syn
 
 `"tcp[tcpflags] & tcp-syn !=0"`
 
-### only for tcp reset
+## only for tcp reset
 
 `"tcp[tcpflags] & tcp-rst !=0"`
 
-### Adjusting output
+## Adjusting output
 
 -XX \(hex format as well as asci format\)
 
@@ -101,9 +101,9 @@ Quick Note:
 
 -ttttt \(time since first packet\)
 
-### Advanced header filtering
+## Advanced header filtering
 
-#### TCP Segment structure
+### TCP Segment structure
 
 TCP segment consists of header & data.
 
@@ -172,13 +172,11 @@ This field \(valid only if the URG control flag is set\) is used to point to dat
 
 **Options and padding**
 
-#### Filter data packets
+### Filter data packets
 
 The flags are defined in the 14th byte of the TCP header.
 
 In order to filter data packets we will have to look into packets with ACK and PSH are represented by the fourth and fifth bits of the 14th byte from TCP header \(above table\).
-
-
 
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -192,7 +190,7 @@ So, this means; you would want to filter using `'tcp[13] = 24'`
 
 e.g: `tcpdump -A - n 'tcp[13] = 24'`
 
-### Calculating flag's position
+## Calculating flag's position
 
 _You count the bytes \(8 bits\) from the top, numbering them at 0:_
 
@@ -202,7 +200,7 @@ _You count the bytes \(8 bits\) from the top, numbering them at 0:_
 * _"Data Offset" & "Res."_ would be byte 12.
 * That takes you to byte 13, the bits in this byte are the flags.
 
-#### Flag details
+### Flag details
 
 | Flag Name | Header | Location | Purpose |
 | :---: | :---: | :---: | :---: |
@@ -219,7 +217,7 @@ _You count the bytes \(8 bits\) from the top, numbering them at 0:_
 
 \(ECN : Explicit Congestion Notification\)
 
-#### Bit order
+### Bit order
 
 I'll also mention that the number stored in byte 13 is ordered such that:
 
@@ -230,13 +228,13 @@ I'll also mention that the number stored in byte 13 is ordered such that:
 * bit 16 = _ACK_
 * bit 32 = _URG_
 
-#### Filtering data packets only
+### Filtering data packets only
 
 To do this, we will look for packets that have the PSH and ACK flags turned on. All packets sent and received after the initial 3-way handshake will have the ACK flag set. The PSH flag 709 is used to enforce immediate delivery of a packet and is commonly used in interactive Application Layer protocols to avoid buffering.
 
 We can pass this number to tcpdump with 'tcp\[13\] = 24' as a display filter to indicate that we only want to see packets with the ACK and PSH bits set \("data packets"\) as represented by the fourth and fifth bits \(24\) of the 14th byte of the TCP header. Bear in mind, the tcpdump array index used for counting the bytes starts at zero, so the syntax should be \(tcp\[13\]\).
 
-#### Matching PSH-ACK packets
+### Matching PSH-ACK packets
 
 `tcpdump -i eth1 'tcp[13] = 24'`
 

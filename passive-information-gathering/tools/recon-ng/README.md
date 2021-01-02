@@ -1,12 +1,12 @@
 # Recon-ng
 
-[Recon-ng](https://github.com/lanmaster53/recon-ng) is Metasploit like web reconnaissance framework. 
+[Recon-ng](https://github.com/lanmaster53/recon-ng) is Metasploit like web reconnaissance framework.
 
 Getting Started:
 
 The Installation process is well described [here](https://github.com/lanmaster53/recon-ng/wiki/Getting-Started#installation). And in this example, we will use a docker image of Kali Linux.
 
-### Running Kali Linux. \(with [Recon-ng files](https://github.com/lanmaster53/recon-ng.git) [mounted](https://docs.docker.com/storage/volumes/).\)
+## Running Kali Linux. \(with [Recon-ng files](https://github.com/lanmaster53/recon-ng.git) [mounted](https://docs.docker.com/storage/volumes/).\)
 
 ```text
  docker run -it -v ~/recon-ng:/recon-ng --net=host my_kali /bin/bash                                                             125 ↵ | at minikube ⎈ 
@@ -30,7 +30,7 @@ drwxr-xr-x  6 root root   192 Jan  1 15:36 recon
 root@docker-desktop:/# cd /recon-ng/
 ```
 
-### Installing requirements \(using Sourecode\)
+## Installing requirements \(using Sourecode\)
 
 ```text
 root@docker-desktop:/recon-ng# pip install --upgrade -r REQUIREMENTS
@@ -44,7 +44,7 @@ root@docker-desktop:/recon-ng# apt-get update && apt-get install pip
 root@docker-desktop:/recon-ng# pip install --upgrade -r REQUIREMENTS
 ```
 
-### Installing \(APT\)
+## Installing \(APT\)
 
 ```text
 apt-get update && apt-get install recon-ng

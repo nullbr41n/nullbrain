@@ -4,5 +4,3 @@ Google Hacking database contains a multitude of creative search operator which i
 
 More detail of DB can be found within [exploit-db.com](https://www.exploit-db.com/google-hacking-database).
 
-
-

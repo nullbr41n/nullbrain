@@ -1,6 +1,6 @@
 # Linux
 
-### Filesystem Hierarchy
+## Filesystem Hierarchy
 
 [Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 
@@ -20,11 +20,11 @@ These Binaries must be present when the system is mounted in single-user mode.
 Not essential for single-user mode.
 ```
 
-### Package Management
+## Package Management
 
 Kali Linux usages advanced package tool \(apt\).
 
-### Customizing the Bash Environment
+## Customizing the Bash Environment
 
 The HISTIGNORE variable is particularly useful for filtering out basic commands that are run frequently, such as Is, exit, history, bg, etc:
 

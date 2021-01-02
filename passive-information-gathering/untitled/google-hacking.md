@@ -6,8 +6,6 @@ Google hacking, also referred to as Google Dorking, is a hacker technique that u
 
 This technique was made popular by Johnny Long in 2001 and it involves a variety of search engine query with advance operators.
 
-
-
 | Operator | Purpose |
 | :--- | :--- |
 | site | Search specific site \(wikipedia.org\) |

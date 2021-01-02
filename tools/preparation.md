@@ -14,5 +14,3 @@ description: Prep well
 4. Cherry picking and structure learning; nail down and understand overview of situation. \(Avoid road to nowhere.\)
 5. Practical/Active learning.
 
-
-

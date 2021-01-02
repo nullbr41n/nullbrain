@@ -8,5 +8,3 @@ This doc expects readers to bring some goodies in their backpack.
 * Bash scripting.
 * Concept of programming \(not actual writing code but to be able to read through the code\).
 
-
-

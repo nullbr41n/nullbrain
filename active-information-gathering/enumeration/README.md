@@ -1,4 +1,2 @@
 # Enumeration
 
-## 
-

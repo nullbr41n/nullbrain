@@ -1,7 +1,5 @@
 # Tools
 
-
-
 **Tools**
 
 * Google hacking DB
