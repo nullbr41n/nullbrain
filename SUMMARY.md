@@ -61,5 +61,6 @@
 
 ## Web Application Exploit
 
-* [WAE](web-application-exploit/wae.md)
+* [Enumeration](web-application-exploit/enumeration.md)
+* [Tools](web-application-exploit/wae.md)
 

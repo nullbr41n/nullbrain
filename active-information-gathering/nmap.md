@@ -1,32 +1,34 @@
 # Nmap
 
-## Stealth/SYN Scanning
+## Scanning
+
+### Stealth/SYN Scanning
 
 `nmap -ss <ip_address>`
 
-## TCP Scanning
+### TCP Scanning
 
 `nmap -sT <ip_address>`
 
-## UDP Scanning
+### UDP Scanning
 
 `nmap -sU <ip_address>`
 
-## TCP/UDP Scanning
+### TCP/UDP Scanning
 
 `nmap -sS -sU <ip_address>`
 
-## Network Scanning/Sweeping
+### Network Scanning/Sweeping
 
 `nmap -sn <First ip_address>-last octate of range`
+
+### Common ports scanning/Sweeping
+
+`nmap -sT -A --top-ports=20 <First ip_address>-<last octate of range> -oG top-port-scanning.txt`
 
 ## Nmap with Grep
 
 `nmap -v -sn <ip_address> -oG net-scan.txt` `grep Up net-scan.txt | cut -d" " -f 2`
-
-## Common ports scanning/Sweeping
-
-`nmap -sT -A --top-ports=20 <First ip_address>-<last octate of range> -oG top-port-scanning.txt`
 
 ## OS fingerprint
 
@@ -36,15 +38,15 @@
 
 `nmap -sV -sT -A <ip_address>`
 
-## Scripting Engine \(NSE\)
-
-[NSE](https://github.com/demoninhead/nullbrain/tree/c0b04300469ec045e6e53341ed9577bcb660b803/nmap_scripting_engine/index.md)
-
 ## Scanning for the NetBIOS Service
 
 nmap -v -p 139,445 -oG smb.txt 10.11.1.1-254
 
-## Nmap SMB NSE Scripts
+## Scripting Engine \(NSE\)
+
+[NSE](https://github.com/demoninhead/nullbrain/tree/c0b04300469ec045e6e53341ed9577bcb660b803/nmap_scripting_engine/index.md)
+
+### Nmap SMB NSE Scripts
 
 ```text
 ls -1 /usr/share/nmap/scripts/smb*
@@ -65,4 +67,6 @@ NSE scripts are located in the /usr/share/nmap/scripts directory.
 
 1. smb-os-discovery: attempts to connect to the SMB service on a target system and determine its operating system:
 2. dns-zone-transfer:
+
+### [Nmap Vulnerability Scanning](../vulnerability-scanning/nmap.md)
 
