@@ -62,5 +62,10 @@
 ## Web Application Exploit
 
 * [Enumeration](web-application-exploit/enumeration.md)
-* [Tools](web-application-exploit/wae.md)
+* [Tools](web-application-exploit/wae/README.md)
+  * [DIRB](web-application-exploit/wae/dirb.md)
+
+## Buffer Overflow
+
+* [Memory](buffer-overflow/memory.md)
 
