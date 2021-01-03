@@ -57,6 +57,7 @@
 ## Vulnerability Scanning
 
 * [Vulnerability Scanning](vulnerability-scanning/vulnerability-scanning.md)
+* [Nmap](vulnerability-scanning/nmap.md)
 
 ## Web Application Exploit
 
