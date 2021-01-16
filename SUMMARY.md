@@ -72,6 +72,9 @@
 ## Real World!
 
 * [Enumeration](real-world/enumeration.md)
+* [Attack Vector](real-world/attack-vector/README.md)
+  * [Server-Side Template Injection](real-world/attack-vector/server-side-template-injection.md)
+  * [SQL Injection](real-world/attack-vector/sql-injection.md)
 * [Web Reconnaissance](real-world/web-reconnaissance.md)
 * [Port Scanning](real-world/port-scanning.md)
 * [Privilege escalation](real-world/privilege-escalation/README.md)
