@@ -69,3 +69,13 @@
 
 * [Memory](buffer-overflow/memory.md)
 
+## Real World!
+
+* [Enumeration](real-world/enumeration.md)
+* [Web Reconnaissance](real-world/web-reconnaissance.md)
+* [Port Scanning](real-world/port-scanning.md)
+* [Privilege escalation](real-world/privilege-escalation/README.md)
+  * [Splunk](real-world/privilege-escalation/splunk.md)
+* [Reverse Shell](real-world/reverse-shell.md)
+* [Tools](real-world/tools.md)
+
