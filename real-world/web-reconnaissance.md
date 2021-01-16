@@ -2,7 +2,5 @@
 
 \*\*\*\*[**DIRB**](../web-application-exploit/wae/dirb.md)\*\*\*\*
 
-**Gobuster**
-
-**todo:**
+\*\*\*\*[**Gobuster**](https://tools.kali.org/web-applications/gobuster)**: TODO**
 
