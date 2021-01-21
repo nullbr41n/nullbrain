@@ -72,6 +72,8 @@
 ## Real World!
 
 * [Enumeration](real-world/enumeration.md)
+* [Hashcat](real-world/hashcat/README.md)
+  * [Hashcat options](real-world/hashcat/hashcat-options.md)
 * [Attack Vector](real-world/attack-vector/README.md)
   * [Server-Side Template Injection](real-world/attack-vector/server-side-template-injection.md)
   * [SQL Injection](real-world/attack-vector/sql-injection.md)
