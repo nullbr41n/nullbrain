@@ -71,16 +71,17 @@
 
 ## Real World!
 
-* [Enumeration](real-world/enumeration.md)
+* [Bruteforce](real-world/bruteforce.md)
+* [Tools](real-world/tools.md)
+* [Enumeration](real-world/enumeration/README.md)
+  * [Tools](real-world/enumeration/tools-1.md)
+* [SQL Injection](real-world/sql-injection.md)
+* [Server-Side Template Injection](real-world/server-side-template-injection.md)
 * [Hashcat](real-world/hashcat/README.md)
   * [Hashcat options](real-world/hashcat/hashcat-options.md)
-* [Attack Vector](real-world/attack-vector/README.md)
-  * [Server-Side Template Injection](real-world/attack-vector/server-side-template-injection.md)
-  * [SQL Injection](real-world/attack-vector/sql-injection.md)
 * [Web Reconnaissance](real-world/web-reconnaissance.md)
 * [Port Scanning](real-world/port-scanning.md)
 * [Privilege escalation](real-world/privilege-escalation/README.md)
   * [Splunk](real-world/privilege-escalation/splunk.md)
 * [Reverse Shell](real-world/reverse-shell.md)
-* [Tools](real-world/tools.md)
 
