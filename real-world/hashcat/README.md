@@ -6,6 +6,8 @@ description: Hashcat
 
 Hashcat is considered world's fastest and most advanced password recovery Utility.
 
+### Usage I:
+
 `hashcat -r /usr/share/hashcat/rules/best64.rule --stdout hint > password.txt`
 
 ```text
@@ -25,4 +27,18 @@ hash        : Contains hashed key
 password.txt: Contains hints
 --show      : Compare hashlist with potfile; show cracked hashes
 ```
+
+### Usage II:
+
+`hashcat -m 1400 password.hash /usr/share/wordlists/rockyou.txt --force`
+
+### Error:
+
+```text
+* Device #1: Not a native Intel OpenCL runtime. Expect massive speed loss.
+             You can use --force to override, but do not report related errors.
+No devices found/left.
+```
+
+Solution: `hashcat -m 1400 password.hash /usr/share/wordlists/rockyou.txt --force`
 
