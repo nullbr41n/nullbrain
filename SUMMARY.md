@@ -85,4 +85,5 @@
   * [SUID](real-world/privilege-escalation/suid.md)
   * [Splunk](real-world/privilege-escalation/splunk.md)
 * [Reverse Shell](real-world/reverse-shell.md)
+* [PHP](real-world/php.md)
 
