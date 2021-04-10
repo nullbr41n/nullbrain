@@ -61,7 +61,8 @@
 
 ## Web Application Exploit
 
-* [Enumeration](web-application-exploit/enumeration.md)
+* [Enumeration](web-application-exploit/enumeration/README.md)
+  * [Techniques](web-application-exploit/enumeration/techniques.md)
 * [Tools](web-application-exploit/wae/README.md)
   * [DIRB](web-application-exploit/wae/dirb.md)
 
@@ -86,4 +87,8 @@
   * [Splunk](real-world/privilege-escalation/splunk.md)
 * [Reverse Shell](real-world/reverse-shell.md)
 * [PHP](real-world/php.md)
+
+## Malicious payload
+
+* [Metasploit APK](malicious-payload/metasploit-apk.md)
 
