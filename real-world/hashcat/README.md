@@ -32,6 +32,23 @@ password.txt: Contains hints
 
 `hashcat -m 1400 password.hash /usr/share/wordlists/rockyou.txt --force`
 
+### Usage III:
+
+`hashcat -m 7900 -a 0 -o found.txt crack`[Usage II:](https://app.gitbook.com/@nullbrain/s/nullbrain/~/drafts/-MYaoe288ubj13s76ZDn/real-world/hashcat#usage-ii)`.hash /usr/share/wordlists/rockyou.txt --force`
+
+
+
+```text
+Options explained:
+
+-m 7900     : Hash type (Drupal7)
+-a (num)    : 
+-o (output) : Output file (e.g found.txt)
+hash        : Contains hashed key (crack.hash)
+password.txt: Contains hints
+--show      : Compare hashlist with potfile; show cracked hashes
+```
+
 ### Error:
 
 ```text

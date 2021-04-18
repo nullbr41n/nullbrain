@@ -83,6 +83,7 @@
 * [Web Reconnaissance](real-world/web-reconnaissance.md)
 * [Port Scanning](real-world/port-scanning.md)
 * [Privilege escalation](real-world/privilege-escalation/README.md)
+  * [snapd](real-world/privilege-escalation/snapd.md)
   * [SUID](real-world/privilege-escalation/suid.md)
   * [Splunk](real-world/privilege-escalation/splunk.md)
 * [Reverse Shell](real-world/reverse-shell.md)
