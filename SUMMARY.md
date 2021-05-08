@@ -86,7 +86,8 @@
   * [snapd](real-world/privilege-escalation/snapd.md)
   * [SUID](real-world/privilege-escalation/suid.md)
   * [Splunk](real-world/privilege-escalation/splunk.md)
-* [Reverse Shell](real-world/reverse-shell.md)
+* [Reverse Shell](real-world/reverse-shell/README.md)
+  * [PHP deserialization](real-world/reverse-shell/php-deserialization.md)
 * [PHP](real-world/php.md)
 
 ## Malicious payload
