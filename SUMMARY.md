@@ -81,6 +81,7 @@
 * [Hashcat](real-world/hashcat/README.md)
   * [Hashcat options](real-world/hashcat/hashcat-options.md)
 * [Web Reconnaissance](real-world/web-reconnaissance.md)
+* [Recon](real-world/recon.md)
 * [Port Scanning](real-world/port-scanning.md)
 * [Privilege escalation](real-world/privilege-escalation/README.md)
   * [File permissions](real-world/privilege-escalation/file-permissions.md)

@@ -1,6 +1,6 @@
 # Privilege escalation
 
-privilege escalation is vast topic in itself, however technique can be simple as:
+privilege escalation is a vast topic in itself, however, the technique can be simple as:
 
 1. Any other user in the box?
 2. Any file with higher permission
