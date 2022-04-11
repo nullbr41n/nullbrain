@@ -4,4 +4,4 @@ description: Linux Privilege Escalation
 
 # PRIVILEGE ESCALATION
 
-[credentials](privilege-escalation/credentials/ "mention")
+[credentials.md](privilege-escalation/credentials.md "mention")
