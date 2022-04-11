@@ -30,7 +30,8 @@
 ***
 
 * [PRIVILEGE ESCALATION](privilege-escalation.md)
-  * [Credentials](privilege-escalation/credentials.md)
+  * [Credentials](privilege-escalation/credentials/README.md)
+    * [Bash History](privilege-escalation/credentials/bash-history.md)
 
 ## Passive Information Gathering
 
