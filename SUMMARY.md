@@ -29,7 +29,8 @@
 
 ***
 
-* [Privilege Escalation](privilege-escalation.md)
+* [PRIVILEGE ESCALATION](privilege-escalation/README.md)
+  * [Credentials](privilege-escalation/credentials.md)
 
 ## Passive Information Gathering
 

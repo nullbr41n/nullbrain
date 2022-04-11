@@ -2,11 +2,11 @@
 description: Linux Privilege Escalation
 ---
 
-# Privilege Escalation
+# PRIVILEGE ESCALATION
 
 {% tabs %}
 {% tab title="Credentials" %}
-![Privilege Escalation Mind map \[Crednetials\]](<.gitbook/assets/Screen Shot 2022-04-11 at 1.12.23 PM.png>)
+![Privilege Escalation Mind map \[Crednetials\]](<../.gitbook/assets/Screen Shot 2022-04-11 at 1.12.23 PM.png>)
 {% endtab %}
 
 {% tab title="Second Tab" %}
