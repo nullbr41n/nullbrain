@@ -2,7 +2,7 @@
 description: Linux Privilege Escalation (Credentials)
 ---
 
-# Credentials
+# 🪛 Credentials
 
 [bash-history.md](credentials/bash-history.md "mention")
 
