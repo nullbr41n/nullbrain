@@ -30,7 +30,9 @@
 ***
 
 * [PRIVILEGE ESCALATION](privilege-escalation.md)
-  * [Credentials](privilege-escalation/credentials.md)
+  * [Example](privilege-escalation/example.md)
+  * [🏁 Kernel Exploits](privilege-escalation/kernel-exploits.md)
+  * [🪛 Credentials](privilege-escalation/credentials.md)
     * [Bash History](privilege-escalation/credentials/bash-history.md)
 
 ## Passive Information Gathering
