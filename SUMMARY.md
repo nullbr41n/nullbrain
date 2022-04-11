@@ -6,7 +6,7 @@
 
 * [Preparation](tools/preparation.md)
 
-## basics/pre-req <a id="basics"></a>
+## basics/pre-req <a href="#basics" id="basics"></a>
 
 * [Backpack](basics/backpack.md)
 * [Linux](basics/linux.md)
@@ -26,6 +26,10 @@
 
 * [Wireshark](network-analysis-tools/wireshark.md)
 * [Tcpdump](network-analysis-tools/tcpdump.md)
+
+***
+
+* [Privilege Escalation](privilege-escalation.md)
 
 ## Passive Information Gathering
 
@@ -98,4 +102,3 @@
 ## Malicious payload
 
 * [Metasploit APK](malicious-payload/metasploit-apk.md)
-
