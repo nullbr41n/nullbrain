@@ -12,4 +12,6 @@ Privilege escalation can be of horizontol users or vertical, When i say horizont
 
 [reuse-passwords.md](credentials/reuse-passwords.md "mention")
 
+[local-database.md](credentials/local-database.md "mention")
+
 ![](<../.gitbook/assets/Screen Shot 2022-04-11 at 1.12.23 PM.png>)
