@@ -33,6 +33,7 @@
   * [Example](privilege-escalation/example.md)
   * [🏁 Kernel Exploits](privilege-escalation/kernel-exploits.md)
   * [🪛 Credentials](privilege-escalation/credentials.md)
+    * [Reuse Passwords](privilege-escalation/credentials/reuse-passwords.md)
     * [Bash History](privilege-escalation/credentials/bash-history.md)
 
 ## Passive Information Gathering
