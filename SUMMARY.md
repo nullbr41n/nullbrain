@@ -35,6 +35,7 @@
   * [🪛 Credentials](privilege-escalation/credentials.md)
     * [Reuse Passwords](privilege-escalation/credentials/reuse-passwords.md)
     * [Bash History](privilege-escalation/credentials/bash-history.md)
+    * [Local Database](privilege-escalation/credentials/local-database.md)
 
 ## Passive Information Gathering
 
