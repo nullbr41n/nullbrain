@@ -78,3 +78,6 @@ NSE scripts are located in the /usr/share/nmap/scripts directory.
 
 ### [Nmap Vulnerability Scanning](../vulnerability-scanning/nmap.md)
 
+
+
+More Nmap Examples: https://twitter.com/nullbr41n/status/1530459789670621184
