@@ -23,3 +23,13 @@ Other than nmap, you can also explore nbtscan to get NetBIOS information.
 
 [Nmap](https://aashisn.github.io/nullbrain/topics/nmap/#banner-grabbing-amp-service-enumeration)
 
+
+
+`for i in $(cat boxes.log); do nmap -v -p 139,445 --script=smb-os-discovery $i; echo '*************'; echo "$i"; echo "****************" || true; done`
+
+```
+enum4linux -S -U 192.168.1.13
+
+-U        get userlist
+-S        get sharelist
+```
