@@ -8,6 +8,20 @@ ports=$(nmap -p- --min-rate=1000 -T4 ${TARGET_MACHINE} | grep '^[0-9]' | cut -d 
 nmap -sC -sV -p$ports ${TARGET_MACHINE}
 ```
 
+
+### Nmap-nse
+
+Example:
+
+  `locate -r nse$ | grep -i <service|e.g nfs>`
+
+  e.g: `nmap --script "nfs-*" $IP -oN enum/mountable_shares.log`
+	
+  `sudo mount -v -t nfs $IP:/var/nfsshare ./nfs-my-local-dir`
+
+As in example of NFS, things to notice would be e.g: `no_root_squash`
+
+
 ## Scanning
 
 ### Stealth/SYN Scanning
