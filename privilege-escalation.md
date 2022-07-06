@@ -7,3 +7,5 @@ description: Linux Privilege Escalation
 ## [credentials.md](privilege-escalation/credentials.md "mention")
 
 ## [SUID](privilege-escalation/SUID)
+
+## [Writable passwd](privilege-escalation/writeable-passwd)
