@@ -68,10 +68,6 @@ This is an attempt to create mindmap oriented checklist for CTF and no reason ca
 		- [ ] framework/server/service -> searchexploit
 		- [ ] Check for config through URL's like 
 		- [ ] hostname/username/re-use etc
-		- [ ] hydra
-			- [ ] makes sense if we have some password list & user & IP.
-			- [ ] `hydra -l <user> -P <password.list> <IP> ssh`
-			- [ ] `hydra with known user/pass as combination`
 		- [ ] LFI
 			- [ ] check for ssh keys
 			- [ ] check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
@@ -82,6 +78,9 @@ This is an attempt to create mindmap oriented checklist for CTF and no reason ca
 				- [ ] `python -c 'import pty;pty.spawn("/bin/bash")'`
 		- [ ] `linpeas.sh`
 		- [ ] CUPS Http `631`
+	- [ ] SSH
+		- [ ] hydra
+			- [ ] [Howto](tools/bruteforce/ssh/hydra) 
 	- [ ] `curl -A "GoogleBot" http://$IP/robots.txt`
 	- [ ] searchsploit
 	- [ ] Port knocking
