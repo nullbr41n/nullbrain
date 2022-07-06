@@ -12,7 +12,7 @@ graph TD;
 AE[ENUM] --> BE[sudo nmap -p- 10.10.10.10]
 BE -- GatheredListOfPorts --> CE[sudo nmap -p XXXX,XXX -A 10.10.10.10]
 CE --> DEI[dirb http://10.10.10.10:XXXX/ -r]
-CE --> DEII[gobuster dir -u http://10.10.10.10/ -w <OPTIONS> -s '<OPTIONS>' -e]
+CE --> DEII[gobuster dir -u http://10.10.10.10/ -w `OPTIONS` -s `OPTIONS` -e]
 CE --> DEIII[wfuzz -c -z file,<WORDLIST> --hc 404 'http://10.10.10.10']
 DEI --> EE[curl http://10.10.10.10:XXXX/<MEATS>]
 DEI --> DEIQ[requires_to_be_bot?] --> EF[curl -A 'GoogleBot' http://10.10.10.10/robots.txt]
