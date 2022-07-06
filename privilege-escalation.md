@@ -8,4 +8,4 @@ description: Linux Privilege Escalation
 
 ## [SUID](privilege-escalation/SUID)
 
-## [Writable passwd](privilege-escalation/writeable-passwd)
+## [Writable passwd](privilege-escalation/writeable-passwd.md)
