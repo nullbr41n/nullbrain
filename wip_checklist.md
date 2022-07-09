@@ -86,7 +86,7 @@ This is an attempt to create mindmap oriented checklist for CTF and no reason ca
 	- [ ] Port knocking
 		- [ ] nmap port knock 
 - [ ] /cgi-bin
-	- [ ] shellshock?
+	- [ ] shellshock [Howto](foothold/shellshock)
 - [ ] morse code?
 
 
