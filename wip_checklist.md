@@ -153,3 +153,5 @@ This is an attempt to create mindmap oriented checklist for CTF and no reason ca
 	- [ ] writeable `passwd`?
 		- [ ] `perl -le 'print crypt("PassWord","addedsalt")'`
 		- [ ] `echo "nullBrain:saltedvaluefromabove:0:0:User_like_root:/root:/bin/bash" >> /etc/passwd`
+	- [ ] `kernel exploits?`
+		- [ ] e.g Dirty Cow [example HowTo](practical/dirty_cow)
