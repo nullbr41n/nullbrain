@@ -1,1 +1,1 @@
-[checklist](../../wip_checklist)
+[checklist](../../wip_checklist.md)
