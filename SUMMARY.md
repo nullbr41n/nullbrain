@@ -84,8 +84,9 @@
 
 * [Bruteforce](real-world/bruteforce.md)
 * [Tools](real-world/tools.md)
-* [Enumeration](real-world/enumeration/README.md)
-  * [Tools](real-world/enumeration/tools-1.md)
+* [Enumeration](real-world/enumeration.md)
+	* [Enumeration MindMap](wip_enum_mindmap)
+	* [Tools](real-world/enumeration/tools-1.md)
 * [SQL Injection](real-world/sql-injection.md)
 * [Server-Side Template Injection](real-world/server-side-template-injection.md)
 * [Hashcat](real-world/hashcat/README.md)
@@ -104,6 +105,14 @@
 * [Reverse Shell](real-world/reverse-shell/README.md)
   * [PHP deserialization](real-world/reverse-shell/php-deserialization.md)
 * [PHP](real-world/php.md)
+*  [Exploits & Footholds](foothold)
+	* [Exploit Mindmap](wip_exploit_mindmap)
+
+
+
+## Checklist (CTF targetted)
+
+* [checklist](wip_checklist)
 
 ## Malicious payload
 
