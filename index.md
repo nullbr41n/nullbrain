@@ -2,12 +2,11 @@
 
 * [Intro](README.md)
 
-
 ## Tools
 
 * [Preparation](tools/preparation.md)
 
-## basics/pre-req <a id="basics"></a>
+## basics/pre-req <a href="#basics" id="basics"></a>
 
 * [Backpack](basics/backpack.md)
 * [Linux](basics/linux.md)
@@ -27,6 +26,16 @@
 
 * [Wireshark](network-analysis-tools/wireshark.md)
 * [Tcpdump](network-analysis-tools/tcpdump.md)
+
+***
+
+* [PRIVILEGE ESCALATION](privilege-escalation.md)
+  * [Example](privilege-escalation/example.md)
+  * [🏁 Kernel Exploits](privilege-escalation/kernel-exploits.md)
+  * [🪛 Credentials](privilege-escalation/credentials.md)
+    * [Reuse Passwords](privilege-escalation/credentials/reuse-passwords.md)
+    * [Bash History](privilege-escalation/credentials/bash-history.md)
+    * [Local Database](privilege-escalation/credentials/local-database.md)
 
 ## Passive Information Gathering
 
@@ -62,7 +71,8 @@
 
 ## Web Application Exploit
 
-* [Enumeration](web-application-exploit/enumeration.md)
+* [Enumeration](web-application-exploit/enumeration/README.md)
+  * [Techniques](web-application-exploit/enumeration/techniques.md)
 * [Tools](web-application-exploit/wae/README.md)
   * [DIRB](web-application-exploit/wae/dirb.md)
 
@@ -72,22 +82,38 @@
 
 ## Real World!
 
+* [Bruteforce](real-world/bruteforce.md)
+* [Tools](real-world/tools.md)
 * [Enumeration](real-world/enumeration.md)
-	* [Enumeration MindMap](wip_enum_mindmap)
-* [Attack Vector](real-world/attack-vector/README.md)
-  * [Server-Side Template Injection](real-world/attack-vector/server-side-template-injection.md)
-  * [SQL Injection](real-world/attack-vector/sql-injection.md)
+	* [Enumeration MindMap](./CTF/MindMap/enum_mindmap.md)
+	* [Tools](real-world/enumeration/tools-1.md)
+* [SQL Injection](real-world/sql-injection.md)
+* [Server-Side Template Injection](real-world/server-side-template-injection.md)
+* [Hashcat](real-world/hashcat/README.md)
+  * [Hashcat options](real-world/hashcat/hashcat-options.md)
 * [Web Reconnaissance](real-world/web-reconnaissance.md)
+* [Recon](real-world/recon.md)
 * [Port Scanning](real-world/port-scanning.md)
 * [Privilege escalation](real-world/privilege-escalation/README.md)
+  * [File permissions](real-world/privilege-escalation/file-permissions.md)
+  * [Service Exploits](real-world/privilege-escalation/service-exploits.md)
+  * [Kernel Exploits](real-world/privilege-escalation/kernel-exploits.md)
+  * [Privilege Checker](real-world/privilege-escalation/privilege-checker.md)
+  * [snapd](real-world/privilege-escalation/snapd.md)
+  * [SUID](real-world/privilege-escalation/suid.md)
   * [Splunk](real-world/privilege-escalation/splunk.md)
-* [Reverse Shell](real-world/reverse-shell.md)
-* [Tools](real-world/tools.md)
-* [Exploits & Footholds](foothold)
-	* [Exploit Mindmap](wip_exploit_mindmap)
+* [Reverse Shell](real-world/reverse-shell/README.md)
+  * [PHP deserialization](real-world/reverse-shell/php-deserialization.md)
+* [PHP](real-world/php.md)
+*  [Exploits & Footholds](foothold)
+	* [Exploit Mindmap](./CTF/MindMap/exploit_mindmap.md)
 
 
 
 ## Checklist (CTF targetted)
 
-* [checklist](wip_checklist)
+* [checklist](CTF/Checklists)
+
+## Malicious payload
+
+* [Metasploit APK](malicious-payload/metasploit-apk.md)
