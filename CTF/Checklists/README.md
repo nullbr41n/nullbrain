@@ -93,7 +93,7 @@
 		- [ ] Port knocking
 			- [ ] nmap port knock 
 	- [ ] /cgi-bin
-		- [ ] shellshock [Howto](foothold/shellshock)
+		- [ ] shellshock [Howto](../../foothold/shellshock/README.md)
 	- [ ] morse code?
 </details>
 
