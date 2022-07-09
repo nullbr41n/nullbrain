@@ -2,6 +2,7 @@
 
 * [Intro](README.md)
 
+
 ## Tools
 
 * [Preparation](tools/preparation.md)
@@ -72,6 +73,7 @@
 ## Real World!
 
 * [Enumeration](real-world/enumeration.md)
+	* [Enumeration MindMap](wip_enum_mindmap)
 * [Attack Vector](real-world/attack-vector/README.md)
   * [Server-Side Template Injection](real-world/attack-vector/server-side-template-injection.md)
   * [SQL Injection](real-world/attack-vector/sql-injection.md)
@@ -81,3 +83,11 @@
   * [Splunk](real-world/privilege-escalation/splunk.md)
 * [Reverse Shell](real-world/reverse-shell.md)
 * [Tools](real-world/tools.md)
+* [Exploits & Footholds](foothold)
+	* [Exploit Mindmap](wip_exploit_mindmap)
+
+
+
+## Checklist (CTF targetted)
+
+* [checklist](wip_checklist)
