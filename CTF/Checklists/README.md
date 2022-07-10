@@ -23,78 +23,163 @@
 <details>
   <summary>Expand</summary>
 
-- [ ] Enum
-	- [ ] Nmap
-		- [ ] [Howto](active-information-gathering/nmap.md)
-			- [ ] Copy key findings to report
-			- [ ] check results
-			- [ ] Paste to [report](templates/report.md)
-			- [ ] Highlight exploitables/targets
-		- [ ] Rustscan
-			- [ ] check results
-	  - [ ] `enum4linux $IP` -> users, share, comon structure, server block.
-	    - [ ] Highlights
-	      - [ ] check results
-	      - [ ] Check SMB null session
-	      - [ ] system level users
-		- [ ] nmap-nse
-			- [ ] [Howto](active-information-gathering/nmap.md#nmap-nse)
-		- [ ] smb/netbio-ssn
-			- [ ] Ports [139, 445]
-			- [ ] `mkdir smb`
-			- [ ] `nmap -p139,445 --script=smb-enum-shares $IP`
-				- [ ] `smbclient //<IP>/IPC$ -N (/ADMINS/)` -> N: smb null session.
-				- [ ] smbclient //'IP'/qui -N
-				- [ ] crackmapexec
-				- [ ] mfsconsole > use auxilaiary(scanner/smb/smb_login) > set pass rockyou.
-			- [ ] `smbmap -H $IP`
-			- [ ] `smbclient --no-pass -L //$IP`
-			- [ ] `smbclient --no-pass \\\\$IP\\anonymous`
-			- [ ] `smbclient \\\\$IP\\ITDEPT anonymous` [Tested]
-			- [ ] `mget file.name`
-			- [ ] `smbmap -u <user> -p <PassWord> -H $IP`
-			- [ ] `smbclient //'IP'/<share> -U'user'%'password'`
-			- [ ] `smbclient //$IP/secured -U <user>%<password> -c "prompt OFF;recurse ON;mget *"`
-		- [ ] ssl/pop3 [110]
-		- [ ] ssl/imap [993/143]
-		- [ ] Apache Tomcat [8080]
-			- [ ] Read Version
-			- [ ] Check URL (hints)
-			- [ ] default credentials
-			- [ ] mfsconsole /is it allowed?
-		- [ ] Domain [53]
-		- [ ] Web Enum
-			- [ ] Load each targetted port in browser
-			- [ ] export PORT=80
-			- [ ] `dirb http://$IP:$PORT/ -r`
-			- [ ] `nikto --host http://<IP> -C all` :: tool for webapp
-			- [ ] `export URL=${IP}:8080/FUZZ` or `export URL=${IP}:8080/FUZZ/`
-				- [ ] HTTPS you will want to include protocol too
-				- [ ] `wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 "$URL"`
-			- [ ] `gobuster dir -u http://$IP -w /usr/share/dirbuster/wordlists/directory-list-1.0.txt`  :: helpful during bruteforce
-			- [ ] framework/server/service -> searchexploit
-			- [ ] Check for config through URL's like
-			- [ ] hostname/username/re-use etc
-			- [ ] LFI
-				- [ ] check for ssh keys
-				- [ ] check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
-				- [ ] vsftpd -> upload, to rce from upload file
-			- [ ] RFI
-				- [ ] rev shell
-					- [ ] https://www.revshells.com/
-					- [ ] `python -c 'import pty;pty.spawn("/bin/bash")'`
-			- [ ] `linpeas.sh`
-			- [ ] CUPS Http `631`
-		- [ ] SSH
-			- [ ] hydra
-				- [ ] [Howto](tools/bruteforce/ssh/hydra)
-		- [ ] `curl -A "GoogleBot" http://$IP/robots.txt`
-		- [ ] searchsploit
-		- [ ] Port knocking
-			- [ ] nmap port knock 
-	- [ ] /cgi-bin
-		- [ ] shellshock [Howto](../../foothold/shellshock/README.md)
-	- [ ] morse code?
+<details>
+  <summary>NMAP</summary>
+
+	- Test
+	- [Howto](active-information-gathering/nmap.md)
+	- Copy key findings to report
+	- check results
+	- Paste to [report](templates/report.md)
+	- Highlight exploitables/targets	
+
+</details>	
+
+<details>
+  <summary>Rustscan</summary>
+
+	- Test	
+
+</details>	
+	
+
+<details>
+  <summary>enum4linux</summary>
+<br />
+
+- [ ] `enum4linux $IP` -> users, share, comon structure, server block.
+	- [ ] Highlights
+	- [ ] check results
+	- [ ] Check SMB null session
+	- [ ] system level users	
+
+</details>	
+
+
+<details>
+  <summary>nmap-nse</summary>
+<br />
+
+1. [ ] [Howto](active-information-gathering/nmap.md#nmap-nse)
+
+</details>
+
+<details>
+  <summary>smb/netbio-ssn</summary>
+
+	- Ports [139, 445]
+	- `mkdir smb`
+	- `nmap -p139,445 --script=smb-enum-shares $IP`
+		- `smbclient //<IP>/IPC$ -N (/ADMINS/)` -> N: smb null session.
+		- smbclient //'IP'/qui -N
+		- crackmapexec
+		- mfsconsole > use auxilaiary(scanner/smb/smb_login) > set pass rockyou.
+	- `smbmap -H $IP`
+	- `smbclient --no-pass -L //$IP`
+	- `smbclient --no-pass \\\\$IP\\anonymous`
+	- `smbclient \\\\$IP\\ITDEPT anonymous` [Tested]
+	- `mget file.name`
+	- `smbmap -u <user> -p <PassWord> -H $IP`
+	- `smbclient //'IP'/<share> -U'user'%'password'`
+	- `smbclient //$IP/secured -U <user>%<password> -c "prompt OFF;recurse ON;mget *"`	
+
+</details>
+	
+<details>
+  <summary>Apache Tomcat</summary>
+
+	- Apache Tomcat [8080]
+			- Read Version
+			- Check URL (hints)
+			- default credentials
+			- mfsconsole /is it allowed?
+	
+</details>
+
+<details>
+  <summary>Domain</summary>
+
+	- TODO
+	
+</details>
+
+<details>
+  <summary>ssl/pop3</summary>
+
+	- TODO
+	
+</details>
+	
+<details>
+  <summary>ssl/imap</summary>
+
+	- TODO
+	
+</details>
+	
+<details>
+  <summary>TOPIC</summary>
+
+	- TODO
+	
+</details>
+	
+<details>
+  <summary>	Morse code</summary>
+
+	- Test	
+
+</details>
+	
+<details>
+  <summary>shellshock</summary>
+
+- /cgi-bin
+	- [ ] shellshock [Howto](../../foothold/shellshock/README.md)	
+	
+
+</details>
+	
+<details>
+  <summary>SSH</summary>
+
+	- hydra
+		- [Howto](tools/bruteforce/ssh/hydra)
+		- `curl -A "GoogleBot" http://$IP/robots.txt`
+		- searchsploit
+		- Port knocking
+		- nmap port knock 
+
+</details>
+	
+
+<details>
+  <summary>WEB Enum</summary>
+	
+	- Load each targetted port in browser
+	- export PORT=80
+	- `dirb http://$IP:$PORT/ -r`
+	- `nikto --host http://<IP> -C all` :: tool for webapp
+	- `export URL=${IP}:8080/FUZZ` or `export URL=${IP}:8080/FUZZ/`
+		- HTTPS you will want to include protocol too
+		- `wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 "$URL"`
+		- `gobuster dir -u http://$IP -w /usr/share/dirbuster/wordlists/directory-list-1.0.txt`  :: helpful during bruteforce
+		- framework/server/service -> searchexploit
+		- Check for config through URL's like
+		- hostname/username/re-use etc
+	- LFI
+	- check for ssh keys
+	- check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
+	- vsftpd -> upload, to rce from upload file
+	- RFI
+		- rev shell
+			- https://www.revshells.com/
+				- `python -c 'import pty;pty.spawn("/bin/bash")'`
+		- `linpeas.sh`
+	- CUPS Http `631`
+
+</details>
+
 </details>
 
 
