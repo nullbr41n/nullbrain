@@ -216,6 +216,8 @@
 	- [ ] Take advantage of this misconfiguration by abusing the PATH variable
 	- [ ] Take advantage of misconfigured cronjob.
 	- [ ] `find / -perm -u=g -type f 2>/dev/null` -> Are there any GUID
+	- [ ] File transfer
+		- [ ] [Python http.server](../../tools/file-transfer#python-simple-http-server)
 	- [ ] simple HTTP server
 		- [ ] download pspy
 		- [ ] Second shell -> `pspy<BIT>`
