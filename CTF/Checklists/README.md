@@ -226,6 +226,9 @@
 	- [ ] writeable `passwd`?
 		- [ ] `perl -le 'print crypt("PassWord","addedsalt")'`
 		- [ ] `echo "nullBrain:saltedvaluefromabove:0:0:User_like_root:/root:/bin/bash" >> /etc/passwd`
+	- [ ] Privilege escalation Enum
+		- [ ] `https://github.com/diego-treitos/linux-smart-enumeration` (is this allowed in OSCP?)
+		- [ ] `https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS`  (is this allowed in OSCP?)
 	- [ ] `kernel exploits?`
 		- [ ] https://github.com/mzet-/linux-exploit-suggester
 		- [ ] e.g Dirty Cow [example HowTo](practical/dirty_cow)
