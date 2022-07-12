@@ -156,27 +156,30 @@
 <details>
   <summary>WEB Enum</summary>
 	
-	- Load each targetted port in browser
-	- export PORT=80
-	- `dirb http://$IP:$PORT/ -r`
-	- `nikto --host http://<IP> -C all` :: tool for webapp
-	- `export URL=${IP}:8080/FUZZ` or `export URL=${IP}:8080/FUZZ/`
-		- HTTPS you will want to include protocol too
-		- `wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 "$URL"`
-		- `gobuster dir -u http://$IP -w /usr/share/dirbuster/wordlists/directory-list-1.0.txt`  :: helpful during bruteforce
-		- framework/server/service -> searchexploit
-		- Check for config through URL's like
-		- hostname/username/re-use etc
-	- LFI
-	- check for ssh keys
-	- check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
-	- vsftpd -> upload, to rce from upload file
-	- RFI
-		- rev shell
-			- https://www.revshells.com/
-				- `python -c 'import pty;pty.spawn("/bin/bash")'`
-		- `linpeas.sh`
-	- CUPS Http `631`
+- Load each targetted port in browser
+- export PORT=80
+- `dirb http://$IP:$PORT/ -r`
+- `nikto --host http://<IP> -C all` :: tool for webapp
+- `export URL=${IP}:8080/FUZZ` or `export URL=${IP}:8080/FUZZ/`
+	- HTTPS you will want to include protocol too
+	- `wfuzz -c -z file,/usr/share/seclists/Discovery/Web-Content/raft-large-files.txt --hc 404 "$URL"`
+	- `gobuster dir -u http://$IP -w /usr/share/dirbuster/wordlists/directory-list-1.0.txt`  :: helpful during bruteforce
+	- framework/server/service -> searchexploit
+	- Check for config through URL's like
+	- hostname/username/re-use etc
+- LFI
+- check for ssh keys
+- check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
+- vsftpd -> upload, to rce from upload file
+- RFI
+	- rev shell
+		- https://www.revshells.com/
+			- `python -c 'import pty;pty.spawn("/bin/bash")'`
+	- `linpeas.sh`
+- CUPS Http `631`
+
+- Wordpress
+	- wpscan
 
 </details>
 
