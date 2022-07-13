@@ -26,12 +26,11 @@
 <details>
   <summary>NMAP</summary>
 
-	- Test
-	- [Howto](active-information-gathering/nmap.md)
-	- Copy key findings to report
-	- check results
-	- Paste to [report](templates/report.md)
-	- Highlight exploitables/targets	
+- [Howto](active-information-gathering/nmap.md)
+- Copy key findings to report
+- check results
+- Paste to [report](templates/report.md)
+- Highlight exploitables/targets	
 
 </details>	
 
