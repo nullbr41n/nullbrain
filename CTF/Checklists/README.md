@@ -26,7 +26,7 @@
 <details>
   <summary>NMAP</summary>
 
-- [Howto](active-information-gathering/nmap.md)
+- [Howto](../../active-information-gathering/nmap.md)
 - Copy key findings to report
 - check results
 - Paste to [report](templates/report.md)
