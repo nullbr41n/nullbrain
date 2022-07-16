@@ -267,7 +267,7 @@
 		- [ ] check RCE section.
 			- [ ] ***Stabilize Shell $***
 				- [ ] `which python` -> python is here
-				- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
+				- [ ] `python/python3 -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
 				- [ ] `tty` quick test
 				- [ ] `export TERM=xterm-256color`  ⇾ export our terminal
 				- [ ] `alias ll='clear ; ls -lsaht --color-auto'` ⇾ export ll command
