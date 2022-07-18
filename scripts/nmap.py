@@ -9,7 +9,7 @@ import os
 import sys
 
 parser = argparse.ArgumentParser(description='Nmap Scanner.')
-parser.add_argument('--ip', dest='ip_addr', type=str, help='IP Address of Target host' )
+parser.add_argument('--ip', dest='ip_addr', type=str, help='IP Address of Target host', required=True)
 parser.add_argument('--min_rate', dest='min_rate', type=str, help='nmap min rate', default='1000')
 parser.add_argument('--skip_workdir', dest='skip_workdir',
         type=bool,help='Toggle to skip creating workdir creation', default=False)
