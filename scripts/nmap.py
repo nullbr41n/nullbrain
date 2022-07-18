@@ -71,7 +71,7 @@ def svc_scan():
     Function svc_scan:
     """
     with subprocess.Popen(["/usr/bin/nmap " + args.nmap_options + " -p" + \
-        ports_to_scan + " " +  args.ip_addr],
+        ports_to_scan + " " +  args.ip_addr + " -oN " + path + "/enum/nmap_results.log"],
                             stdin =subprocess.PIPE,
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
