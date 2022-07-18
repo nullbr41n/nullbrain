@@ -77,7 +77,8 @@
 	- `smbclient --no-pass -L //$IP`
 	- `smbclient --no-pass \\\\$IP\\anonymous`
 	- `smbclient \\\\$IP\\ITDEPT anonymous` [Tested]
-	- `mget file.name`
+	- `smbclient //192.168.10.10/sambashare` [without variable]
+	- `mget file.name` [Download file.name]
 	- `smbmap -u <user> -p <PassWord> -H $IP`
 	- `smbclient //'IP'/<share> -U'user'%'password'`
 	- `smbclient //$IP/secured -U <user>%<password> -c "prompt OFF;recurse ON;mget *"`	
