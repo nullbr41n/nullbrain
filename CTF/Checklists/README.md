@@ -179,7 +179,11 @@
 - CUPS Http `631`
 
 - Wordpress
-	- wpscan
+  - wpscan
+
+- Drupal
+  - droopescan
+  - `droopescan scan -u  http://192.168.1.1/`
 
 </details>
 
