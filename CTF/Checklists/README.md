@@ -194,6 +194,10 @@
   - droopescan
   - `droopescan scan -u  http://192.168.1.1/`
 
+- Credential Discovery
+  - Trying some well-known default credentials ( admin:admin, admin:password, admin:root)
+
+
 </details>
 
 </details>
