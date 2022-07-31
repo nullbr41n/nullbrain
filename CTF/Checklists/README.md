@@ -206,6 +206,10 @@
 - Last resort
   - Metasploit (if exploit is available)
 
+- Credential Discovery
+  - Trying some well-known default credentials ( admin:admin, admin:password, admin:root)
+
+
 </details>
 
 </details>
