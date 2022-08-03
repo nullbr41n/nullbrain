@@ -1,4 +1,27 @@
-# Enumeration
+This could be post enumeration, if HTTP ports are open.
+
+There are various tools/techniques to run http enumerations.
+
+
+## Tools
+
+- [wfuzz](../../tools/enum/web/wfuzz/README.md)
+- gobuster
+- [dirb](../../tools/enum/web/dirb/README.md)
+- nikto
+- [fuff](../../tools/enum/web/fuff/README.md)
+
+
+## Techniques
+ 
+1. Vulnerability/Exploit search
+   1. [PHP](../../exploitation/PHP/README.md)
+1. Sql injection?
+1. Remote file inclusion
+1. Local file inclusion
+1. Google foo
+
+# Information Gathering
 
 * Programming Language
 * Framework used

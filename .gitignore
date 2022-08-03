@@ -133,3 +133,4 @@ dmypy.json
 # Custom
 templates/working.md
 .obsidian
+scripts/null-tools/working_dir/
