@@ -10,6 +10,7 @@ There are various tools/techniques to run http enumerations.
 - [dirb](../../tools/enum/web/dirb/README.md)
 - nikto
 - [fuff](../../tools/enum/web/fuff/README.md)
+- [gobuster](../../tools/enum/gobuster/README.md)
 
 
 ## Techniques

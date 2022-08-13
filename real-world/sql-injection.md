@@ -30,6 +30,11 @@
         - filed1,2,3 could be likes of username, email, pass
         - 0x3a is hexcode for `:`
 
+### Reverse shell
+
+- 
+
+
 ### TIPS
 
     - SQL query vs Web APP Query: this can mean if its vulnerable to sql injection or not.
