@@ -1,7 +1,7 @@
 `gobuster dir -u http://${IP} -w /usr/share/wordlists/dirb/common.txt -z`
 
 
--u, --url string        The target URL
+-u, --url string                    The target URL
 -w, --wordlist string   Path to the wordlist
 -z, --no-progress       Don't display progress
 

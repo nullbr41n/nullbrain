@@ -135,3 +135,9 @@ templates/working.md
 templates/boxes/
 .obsidian
 scripts/null-tools/working_dir/
+oscp/practice/
+
+.DS_Store
+PREP-OSCP/
+cheat_sheet/
+scripts/exploits/buffer_overflow/execution-flow-linux
