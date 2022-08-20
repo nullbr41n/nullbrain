@@ -1,35 +1,30 @@
 # SMB
 
-## SMB Enumeration
+## enum
 
-### Scanning NetBIOS Service
 
-* NetBIOS
-  * Port:     139
-  * Protocol: TCP/UDP
-  * OSI:      Session layer
-* SMB \(Netbios over TCP\)
-  * Port:       445
-  * protocol:   TCP
-  * OSI:        session layer/Presentation Layer
-
-`nmap -v -p 139,445 -oG smb.txt 10.11.1.1-254`
-
-Other than nmap, you can also explore nbtscan to get NetBIOS information.
-
-### nbtscan
-
-`nbtscan -r 10.11.1.0/24`
-
-[Nmap](https://aashisn.github.io/nullbrain/topics/nmap/#banner-grabbing-amp-service-enumeration)
+| Description|Netbios|Netbios over TCP|
+| ---------|-----------|-----------|
+|KNOWN|netbios| smb|
+|PORT |139| 445 |
+|PROTOCOL|TCP/UDP| TCP |
+|OSI|OSI: Session Layer |session layer/Presentation Layer|
 
 
 
-`for i in $(cat boxes.log); do nmap -v -p 139,445 --script=smb-os-discovery $i; echo '*************'; echo "$i"; echo "****************" || true; done`
-
+```mermaid
+flowchart TD  
+	A(SCAN) -->B(nmap -v -p 139,445 -oG smb.txt 10.10.10.0/24 --script=smb-os-discovery) --> D(smbclient -L 10.10.10.10)
+	A -->C(nbtscan -r 10.10.10.0/24) --> D
+	A -->CI(enum4linux -S -U 10.10.10.10) --> D	
+    D -->|Anonymous| E[exploitable]
+    D -->|shares| E[exploitable]
+	E -->|Yes| F[Foothold]
+    E -->|No| G[End]
 ```
-enum4linux -S -U 192.168.1.13
 
+
+```enum4linux
 -U        get userlist
 -S        get sharelist
 ```
