@@ -7,6 +7,6 @@ flowchart TD
     C -->|smb/445| F[SMB Enum]
     C -->|ldap/389| G[ldap Enum]
 
-	click A "nullbr41n/nullbrain/blob/main/active-information-gathering/nmap.md" "NMAP"
+	click A "nullbr41n/nullbrain/blob/main/active-information-gathering/nmap.md" "NMAP" _blank
 
 ```
