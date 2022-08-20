@@ -7,6 +7,6 @@ flowchart TD
     C -->|smb/445| F[SMB Enum]
     C -->|ldap/389| G[ldap Enum]
 
-	click A "../../active-information-gathering/nmap.md" "NMAP"
+	click A "active-information-gathering/nmap.md" "NMAP"
 
 ```
