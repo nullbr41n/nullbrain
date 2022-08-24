@@ -9,6 +9,11 @@ nmap -sC -sV -p$ports ${TARGET_MACHINE}
 ```
 
 
+NOTE:
+- Running 2 nmap against same host can cause weird results.
+- Drop probes could cause increase in delays and hint to not hammer box.
+
+
 ### Nmap-nse
 
 Example:

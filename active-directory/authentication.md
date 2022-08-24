@@ -41,3 +41,16 @@ graph TD;
 A[client] -- TGService Request --> B[DC]
 B -- TGS validation -- TGServer Reply --> A[Client] 
 ```
+
+
+## Cached Credential Storage and Retrival
+
+- Local security authority subsystem service (LSASS)
+
+### Tools
+
+#### mimikatz
+
+`privilege::debug`
+
+`sekurlsa::logonpasswords`

@@ -1,0 +1,4 @@
+- `find . | grep exe$`
+	- finds file ending with exe
+- `for i in $(cat mylist.txt); do echo $i; echo ${i}xxxxx; echo ${i}yyyy; echo ${i}\escapableChar; done`
+	- populate by concat, slow but easy way to build list

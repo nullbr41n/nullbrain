@@ -9,4 +9,3 @@ Utilites
   * `host -l nullbrain.com dns1.registrar-servers.com`
 * DNSRecon
 * DNSenum
-

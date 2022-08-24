@@ -16,6 +16,9 @@ Other than NMAP `OS` (`-O`) & version (-`sV`) detection simple ping `ttl` can al
   C -->|winrm/47001| H[winrm Enum]
   H --> I[winPeas]
   H --> J[bloodhound]
+  J --> K[writeDACL]
+  K --> L[secretsdump]
+  L --> M[GoldenTicket]
 
 click A "https://github.com/nullbr41n/nullbrain/blob/main/active-information-gathering/nmap.md" "NMAP" _blank
 
@@ -30,4 +33,11 @@ click H "https://github.com/nullbr41n/nullbrain/blob/main/active-directory/win
 click I "https://github.com/nullbr41n/nullbrain/blob/main/active-directory/winrm.md#Winpeas" "winPeas" _blank
 
 click J "https://github.com/nullbr41n/nullbrain/blob/main/active-directory/bloodhound.md" "bloodhound" _blank
+
+click K "https://github.com/nullbr41n/nullbrain/blob/main/active-directory/writeDACL.md" "writeDACL" _blank
+
+click L "https://github.com/nullbr41n/nullbrain/blob/main/active-directory/secretsdump.md" "secretsdump" _blank
+
+click M "https://github.com/nullbr41n/nullbrain/blob/main/active-directory/golden_ticket_linux.md" "GoldenTicket" _blank
+
 ```
