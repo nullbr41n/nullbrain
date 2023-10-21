@@ -12,7 +12,8 @@ nmap -sC -sV -p$ports ${TARGET_MACHINE}
 NOTE:
 - Running 2 nmap against same host can cause weird results.
 - Drop probes could cause increase in delays and hint to not hammer box.
-
+- If required to run reglardless of status use option `-Pn`
+- If output required in file use option `-oN filename.txt`
 
 ### Nmap-nse
 
